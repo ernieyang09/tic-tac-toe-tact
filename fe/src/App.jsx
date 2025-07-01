@@ -6,6 +6,8 @@ import { TonConnectButton } from "@tonconnect/ui-react";
 import HomePage from "./pages/home";
 import BoardPage from "./pages/board";
 
+const PROJECT_NAME = "tic-tac-toe-tact";
+
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
@@ -25,7 +27,7 @@ function App() {
         }}
       >
         <TonConnectButton />
-        <Router>
+        <Router basename={`/${PROJECT_NAME}`}>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/:board" element={<BoardPage />} />

@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { tonClient } from "../libs/client";
-import { TicTacToeGame } from "../../../be/build/TicTacToeMaster/TicTacToeMaster_TicTacToeGame";
-import { Address } from "@ton/ton";
+import { TicTacToeGame } from "../contracts/TicTacToeMaster_TicTacToeGame";
+import { Address } from "@ton/core";
 
 export const useTicTacToeGameContract = (addr) => {
   const [contract, setContract] = useState(null);

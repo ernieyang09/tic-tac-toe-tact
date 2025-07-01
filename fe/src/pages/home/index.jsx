@@ -4,13 +4,13 @@ import {
   useTonAddress,
   UserRejectsError,
   useTonWallet,
+  UnknownError,
 } from "@tonconnect/ui-react";
 import { useTicTacToeMasterContract } from "../../hooks/useTicTokToeMasterContract";
 import { useMemo, useState, useRef, useEffect } from "react";
-import { Address } from "@ton/core";
+import { Address, toNano } from "@ton/core";
 import { useTonSender } from "../../hooks/useTonSender";
 import { useQuery } from "@tanstack/react-query";
-import { toNano } from "@ton/core";
 
 const HomePage = () => {
   const creatingRef = useRef(false);
@@ -69,6 +69,10 @@ const HomePage = () => {
     } catch (e) {
       console.log(e);
       if (e instanceof UserRejectsError) {
+        creatingRef.current = false;
+        setLoading(false);
+      }
+      if (e instanceof UnknownError) {
         creatingRef.current = false;
         setLoading(false);
       }

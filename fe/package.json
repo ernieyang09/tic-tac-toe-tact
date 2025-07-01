@@ -15,11 +15,12 @@
     "@ton/crypto": "^3.3.0",
     "@ton/ton": "^15.3.0",
     "@tonconnect/ui-react": "^2.2.0",
+    "buffer": "^6.0.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^7.6.3",
-    "vite-plugin-node-polyfills": "^0.23.0"
+    "vite-plugin-node-polyfills": "^0.17.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
