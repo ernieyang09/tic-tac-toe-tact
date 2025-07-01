@@ -1,12 +1,12 @@
 import "./App.css";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { TonConnectUIProvider } from "@tonconnect/ui-react";
 import { TonConnectButton } from "@tonconnect/ui-react";
 import HomePage from "./pages/home";
 import BoardPage from "./pages/board";
 
-const PROJECT_NAME = "tic-tac-toe-tact";
+// const PROJECT_NAME = "tic-tac-toe-tact";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -27,7 +27,7 @@ function App() {
         }}
       >
         <TonConnectButton />
-        <Router basename={`/${PROJECT_NAME}`}>
+        <Router>
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/:board" element={<BoardPage />} />
