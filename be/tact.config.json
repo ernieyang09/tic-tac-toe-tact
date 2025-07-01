@@ -1,0 +1,23 @@
+{
+    "$schema": "https://raw.githubusercontent.com/tact-lang/tact/main/src/config/configSchema.json",
+    "projects": [
+        {
+            "name": "TicTacToeMaster",
+            "path": "contracts/tic_tac_toe_master.tact",
+            "output": "build/TicTacToeMaster",
+            "options": {
+                "debug": true
+            },
+            "mode": "full"
+        },
+        {
+            "name": "TicTacToeGame",
+            "path": "contracts/tic_tac_toe_game.tact",
+            "output": "build/TicTacToeGame",
+            "options": {
+                "debug": true
+            },
+            "mode": "full"
+        }
+    ]
+}
